@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = load_model('C:\Python\Final Project DSC UI\models\CNN-proker.h5')
+model = load_model('models\CNN-proker.h5')
 
 def predict_image(file_path):
     img = image.load_img(file_path, target_size=(224,224))
@@ -46,4 +46,4 @@ def predict():
         return render_template('index.html', result=f'Error:{e}')
  
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
