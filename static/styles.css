@@ -1,0 +1,224 @@
+.column {
+    float: left;
+    height: 100px; /* Should be removed. Only for demonstration */
+}
+  
+.left {
+    width: 10%;
+}
+  
+.middle {
+    width: 80%;
+}
+
+.right {
+    width: 10%;
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    height: 100px; /* Should be removed. Only for demonstration */
+}
+  
+.first {
+    width: 50%;
+}
+  
+.second {
+    width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.last-img{
+    max-width: 250px;
+    max-height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+p{
+    text-align: center;
+    color: black;
+}
+.frame {
+    width: 260px;
+    height: 260px;
+    border: 3px solid #ccc;
+    background: #eee;
+    margin: auto;
+  }
+
+.predict-img{
+    max-width: 250px;
+    max-height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    color:white;
+}
+
+.img-pama {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100px;
+    height: 100px;
+    text-align: left;
+}
+
+.img-dsc {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    width: 100px;
+    height: 100px;
+    text-align: right;
+}
+.header-container {
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+
+.body-container {
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+.image-preview-container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.image-preview-container img {
+    text-align: center;
+    display: none;
+    margin-bottom: 30px;
+}
+.image-preview-container input {
+    display: none;
+}
+
+.image-preview-container label {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: blue;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-predict-container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.image-predict-container img {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+}
+.image-predict-container input {
+    display: none;
+}
+
+.image-predict-container label {
+    display: block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: #8338ec;
+    color: #fff;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;;
+}
+button:hover {
+    background-color: grey;
+}
+
+
+@keyframes colorChange {
+    0%  { color: yellow;}
+    50%  { color: green;}
+    100%  { color: blue;}
+}
+
+h1.animated {
+    animation: colorChange 2s infinite;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>Proker Image Recognizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="row">
+            <div class="column left">
+                <img class="img-pama" src="{{url_for('static', filename='pama.png')}}", alt ="pama">  
+            </div>
+            <div class="column middle">
+                <br>
+                <h1>Proker Image Recognizer</h1>
+            </div>
+            <div class="column right">
+                <img class="img-dsc" src="{{url_for('static', filename='dsc.png')}}", alt ="dsc">  
+            </div>
+        </div>
+    </div>
+    <div class="body-cointainer">
+        <div class="row">
+            <div class="column first">
+                <form action="/predict" method="post" enctype="multipart/form-data">
+                <div class="image-preview-container">
+                    <div class="frame">
+                        <img class="last-img" id="preview-selected-image" />
+                    </div>
+                    <br>
+                    <label for="file-upload">Upload Image</label>
+                    <input  type="file" name="file" id="file-upload" accept="image/*" onchange="previewImage(event);" />
+                    <br>
+                    <button type="submit">Predict</button>
+                </div>
+                </form>
+            </div>
+            <div class="column second">
+                {% if result %}
+                <div class="image-predict-container">
+                    <div class="frame">
+                        <img class="predict-img" src="{{url_for('static', filename=last_uploaded_photo)}}", alt ="last_uploaded_photo">
+                    </div>
+                </div>
+                <br>
+                <p>{{result}}</p>
+                {% endif %}
+                <script src="{{url_for('static', filename='scripts.js')}}"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
